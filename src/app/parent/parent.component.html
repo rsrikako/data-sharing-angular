@@ -1,0 +1,19 @@
+<div class="card bg-warning">
+  <h5 class="text-center p-3">Parent</h5>
+  <div class="px-3">
+    <!-- input field in parent component to change the value -->
+    <!-- value is 2 way binded using ngModel -->
+    <input type="text" [(ngModel)]="value" class="form-control" />
+  </div>
+  <!-- interpolation of value in parent component  -->
+  <div class="p-3 text-center">
+    {{ value }}
+  </div>
+  <!-- child component used in parent component -->
+  <!-- value which is present in the right side below 
+    is the variable name in the parent component -->
+  <!-- value which is present in the left side below 
+    is the variable name in the child component 
+    or can be also the value in the Input decorator -->
+  <app-child [(value)]="value"></app-child>
+</div>

@@ -1,0 +1,17 @@
+<div class="card bg-success p-3">
+  <h5 class="text-center">Child</h5>
+  <div class="py-3">
+    <!-- input field in child component to change the value -->
+    <!-- value is 2 way binded using ngModel -->
+    <input
+      type="text"
+      [(ngModel)]="value"
+      (keyup)="updateValue($event)"
+      class="form-control"
+    />
+  </div>
+  <!-- interpolation of value in child component  -->
+  <div class="text-center">
+    {{ value }}
+  </div>
+</div>
